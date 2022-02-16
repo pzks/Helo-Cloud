@@ -1,37 +1,24 @@
 # HeloCloud
 
 #### 介绍
-简单的网盘
+HeloCloud 是一个简单的php开发的网盘，提供给用户直接链接服务，1.0版本使用zui作为前端框架搭建，其后的版本使用bootstrap作为前端框架，后端基于simpost框架进行深度优化制作，感谢大家使用！
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+#### 版本发展
+| 版本   | 日期        | 修改内容           |
+|------|-----------|----------------|
+| v1.0 | 2022.2.12 | 第一个版本，bug版本    |
+| v2.0 | 2022.2.17 | 第二个版本，修复了n个bug |
+|      |           |                |
 
 
-#### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 使用到的项目
+
+1. sweetalert弹窗：https://sweetalert.bootcss.com/
+2. Strapdown.js解释器：https://github.com/arturadib/strapdown/
+3. jquery前端：https://jquery.com/
+4. openzui前端：http://www.openzui.com/
+5. bootstrap前端：https://getbootstrap.com/
+
+#### 致谢
+感谢bilibili的广大网友提出的bug建议，感谢那些找bug的人，感谢那些提供建议的人
