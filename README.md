@@ -1,8 +1,10 @@
-![输入图片说明](image/image.png)
+![渲染图](image/image.png)
 # HeloCloud
 
 #### 介绍
 HeloCloud 是一个简单的php开发的网盘，提供给用户直接链接服务，1.0版本使用zui作为前端框架搭建，其后的版本使用bootstrap作为前端框架，后端基于simpost框架进行深度优化制作，感谢大家使用，其1.0版本使用开源协议为木兰2.0协议和cc4.0协议，但其2.0版本为木兰2.0和Hele open source license V3.1[HSL 3.1]进行发布
+
+ **下载使用** `git clone https://gitee.com/penkai/helo-cloud.git`
 
 - HSL 3.1 ：[https://pzks.github.io/2021/04/30/Hele-open-source-license/](https://pzks.github.io/2021/04/30/Hele-open-source-license/)
 
