@@ -3,12 +3,15 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>退出</title>
+<<<<<<< HEAD
+=======
 <!-- zui -->
 <link href="../css/zui.min.css" rel="stylesheet">
 <!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <!-- ZUI Javascript组件 -->
 <script src="../js/zui.min.js"></script>
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 <script src="../js/sweetalert.min.js"></script>
 </head>
 <body>
@@ -17,10 +20,18 @@
 </html>
 
 <?php
+<<<<<<< HEAD
+include './function.php';
+$user = $_COOKIE['key'];//获取cookie
+$dir = "./".$user."/";//上传目录
+// 允许上传的文件后缀
+$allowedExts = array("sb3","sb2","sb","apk","cpp","asm","h","iso","img","reg","bat","docx","pptx","md","c","class","ttf","psd","dat","sh","log","flv","3gp","gif","jpeg","jpg","png","zip","rar","doc","txt","sql","js","7z","exe","mp3","mp4","wav","ppt","pdf","wps","ppt","dll","mdb","xml","xls","ico","rmvb","tar.gz","tar");
+=======
 $user = $_COOKIE['key'];//获取cookie
 $dir = "./".$user."/";//上传目录
 // 允许上传的文件后缀
 $allowedExts = array("cpp","asm","h","iso","img","reg","bat","docx","pptx","md","c","class","ttf","psd","dat","sh","log","flv","3gp","gif","jpeg","jpg","png","zip","rar","doc","txt","sql","js","7z","exe","mp3","mp4","wav","ppt","pdf","wps","ppt","dll","mdb","xml","xls","ico","rmvb","tar.gz","tar");
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 $temp = explode(".", $_FILES["file"]["name"]);
 echo $_FILES["file"]["size"];
 $extension = end($temp);     // 获取文件后缀名
@@ -50,9 +61,19 @@ if ((($_FILES["file"]["type"] == "image/gif")
 || ($_FILES["file"]["type"] == "application/x-sh")
 || ($_FILES["file"]["type"] == "image/png")
 || ($_FILES["file"]["type"] == "image/x-png"))
+<<<<<<< HEAD
+&& ($_FILES["file"]["size"] < (20480*10*10*10*10)) //204800000字节 = 200000kb
+&& in_array($extension, $allowedExts))
+{
+  //----------------------
+//版权所有，侵权必究
+//copyright (C) 2022 pengzekai
+//----------------------
+=======
 && ($_FILES["file"]["size"] < (20480*10*10*10*10*10)) //2000000kb
 && in_array($extension, $allowedExts))
 {
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
     if ($_FILES["file"]["error"] > 0)
     {
         echo "错误：: " .$_FILES["file"]["error"] . "<br>";
@@ -61,12 +82,20 @@ if ((($_FILES["file"]["type"] == "image/gif")
     {
         echo "上传文件名: " .$_FILES["file"]["name"] . "<br>";
         echo "文件类型: " .$_FILES["file"]["type"] . "<br>";
+<<<<<<< HEAD
+        $file_user_round = round($_FILES["file"]["size"]/(1024*1024),5); 
+=======
         $file_user_round = round($_FILES["file"]["size"]/(1024*1024),2); 
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
         echo "文件大小: ".$file_user_round." MB<br>";
         //echo "文件临时存储的位置: " . $_FILES["file"]["tmp_name"] . "<br>";
         //------------------------------------------------------------------
         $now_size_file_number1 = $_FILES["file"]["size"] / (1024*1024);
+<<<<<<< HEAD
+        $yushu1 = round($now_size_file_number1,5);
+=======
         $yushu1 = round($now_size_file_number1,2);
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
         $dir21 = "../data/".$user;
         $uesr_mu1 = $dir21;
         $now_size_file1 = @file_get_contents($uesr_mu1."/now_user_number.txt");
@@ -89,12 +118,23 @@ swal({
 );
 </script>';
         $now_size_file_number = $_FILES["file"]["size"] / (1024*1024);
+<<<<<<< HEAD
+        $yushu = round($now_size_file_number,5);
+=======
         $yushu = round($now_size_file_number,2);
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
         $dir2 = "../data/".$user;
         $uesr_mu = $dir2;
         $now_size_file = @file_get_contents($uesr_mu."/now_user_number.txt");
         $now_size_file_number_go = $now_size_file + $yushu;
         @file_put_contents($uesr_mu."/now_user_number.txt",$now_size_file_number_go);
+<<<<<<< HEAD
+        //----------------------
+//版权所有，侵权必究
+//copyright (C) 2022 pengzekai
+//----------------------
+=======
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
         }else{
 echo '<script language="JavaScript">
 swal({
@@ -112,6 +152,13 @@ swal({
 
     }
 }
+<<<<<<< HEAD
+//----------------------
+//版权所有，侵权必究
+//copyright (C) 2022 pengzekai
+//----------------------
+=======
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 else
 {
 echo '<script language="JavaScript">

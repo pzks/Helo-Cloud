@@ -1,12 +1,25 @@
+<<<<<<< HEAD
+=======
 <!-- 
 文件描述 ：登出
 copyright (C) 2021 pengzekai
 请尊重版权，本文件遵守何乐开源协议
  -->
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 <html lang="CN">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
+<title>用户协议</title>
+
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<script src="./js/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+=======
 <title>退出</title>
 <!-- zui -->
 <link href="./css/zui.min.css" rel="stylesheet">
@@ -15,6 +28,7 @@ copyright (C) 2021 pengzekai
 <!-- ZUI Javascript组件 -->
 <script src="./js/zui.min.js"></script>
 <script src="./js/sweetalert.min.js"></script>
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 </head>
 <body>
 <?php
@@ -22,6 +36,13 @@ copyright (C) 2021 pengzekai
 include './header.php';
 //----------------------
 ?>
+<<<<<<< HEAD
+<br>
+<br>
+<br>
+<div class="card">
+=======
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 尊敬的用户，欢迎使用由IURT提供的服务。在使用前请您阅读如下服务协议，使用本应用即表示您同意接受本协议，本协议产生法律效力，特别涉及免除或者限制IURT团队责任的条款，请仔细阅读。如有任何问题，可向IURT团队咨询。<br>
 1. 服务条款的确认和接受<br>
 通过访问或使用本应用，表示用户同意接受本协议的所有条件和条款。<br>
@@ -82,6 +103,10 @@ IURT团队不会将用户的个人信息和资讯故意透露、出租或出售�
 5.账户删除申请<br>
 用户有权在任何时候编辑用户在IURT团队的帐户信息和资讯，用户也可以填写相关申请表格，要求删除个人帐户，但是用户无条件同意在你的帐户删除后，该帐户内及与该帐户相关的信息和资讯仍然保留在本网站档案记录中，除上述第三条规定的情况外，IURT团队将为用户保密。<br>
 我们保留对此协议的所有解释权！<br>
+<<<<<<< HEAD
+</div>
+=======
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 <?php
 include './footer.php';
 //----------------------

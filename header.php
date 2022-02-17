@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+<div class="fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="./index.php">HeloCloud</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="./index.php">首页 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./xieyi.php">用户协议</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./upload/">个人中心</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        我的账号
+        </a>
+        <div class="dropdown-menu"aria-labelledby="navbarDropdown">
+        <?php
+=======
 <div class="container-fluid">
 
 <nav class="navbar navbar-default" role="navigation">
@@ -26,6 +52,7 @@
           <a href="" class="dropdown-toggle" data-toggle="dropdown">我的账号<b class="caret"></b></a>
           <ul class="dropdown-menu" role="menu">
           <?php
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 $user = $_COOKIE['key'];
 header("content-type:text/html;charset=utf-8");
 $icon=@file_get_contents("./data/".$user."/icon.txt");
@@ -40,7 +67,11 @@ if($user_if == "")
 ?>
 <br>
 <div class="card">
+<<<<<<< HEAD
+<div class="title"><span class="badge badge-light">昵称</span>
+=======
 <div class="title"><span class="label label-primary">昵称</span>
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 <?php
 $user=$_COOKIE['key'];
 header("content-type:text/html;charset=utf-8");
@@ -55,7 +86,11 @@ if($user_if == "")
 ?>
 
 </div>
+<<<<<<< HEAD
+<div class="title"><span class="badge badge-light">QQ</span>
+=======
 <div class="title"><span class="label label-primary">QQ</span>
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 <?php
 $user=$_COOKIE['key'];
 header("content-type:text/html;charset=utf-8");
@@ -69,7 +104,11 @@ if($user_if == "")
 }
 ?></div>
 
+<<<<<<< HEAD
+<div class="title"><span class="badge badge-light">金币</span>
+=======
 <div class="title"><span class="label label-primary">金币</span>
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 <?php
 $user=$_COOKIE['key'];
 header("content-type:text/html;charset=utf-8");
@@ -83,7 +122,11 @@ if($user_if == "")
 }
 ?></div>
 
+<<<<<<< HEAD
+<div class="title"><span class="badge badge-light">存储空间</span>
+=======
 <div class="title"><span class="label label-primary">存储空间</span>
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 <?php
 $user=$_COOKIE['key'];
 header("content-type:text/html;charset=utf-8");
@@ -95,6 +138,18 @@ if($user_if == "")
 }else{
   echo $chunchu."MB/10240MB(10GB)";
 }
+<<<<<<< HEAD
+?>
+          <div class="dropdown-divider"></div>
+          <?php $user_if = $_COOKIE['key'];if($user_if == ""){echo '<a class="dropdown-item" href="login.php">登录</a>';}else{}?>
+          <?php $user_if = $_COOKIE['key'];if($user_if == ""){echo '<a class="dropdown-item" href="reg.php">注册</a>';}else{}?>
+        <a class="dropdown-item" href="exit.php">退出</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+=======
 ?></div>
 
 </div>
@@ -108,4 +163,5 @@ if($user_if == "")
   </div>
 </nav>
 
+>>>>>>> d8faf19f78df51c5462d00e2941a09ee0ce0e38f
 </div>
