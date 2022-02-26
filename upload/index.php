@@ -124,10 +124,13 @@ while (($f1 = readdir($handler)) !== false) {
 closedir($handler);
 //打印所有文件名
 $files[] = [];
-//空占位符，不知道怎么处理，先这样吧！
+
 foreach ($files as $filename) {//删除文件就这样吧！虽然bug，啊哈哈！
 $path = $dir.$filename;//文件存储位置
 $file_number = @filesize($path);  //获取文件大小
+
+//检查文件大小是否为0
+if($file_number != 0) {
 $file_number_to_mb = round($file_number / (1024*1024),5);//单位换算
 $creat_time = @filectime($path);//获取时间
 //----------------------
@@ -152,7 +155,7 @@ $date = date("Y-m-d H:i:s",$creat_time);//变量存储
 //版权所有，侵权必究
 //copyright (C) 2022 pengzekai
 //----------------------
-
+}
 }
 }
 ?>
