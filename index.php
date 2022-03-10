@@ -45,10 +45,7 @@ include './header.php';
           .catch(console.error)
       </script>
     <p id="hitokoto" class="lead"><a id="hitokoto_text">:D 获取中...</a></p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="./upload" role="button">开始使用<span class="badge badge-light">NEW 2.0</span></a>
-  </p>
-  <!-- Hitokoto 一言 End-->
+    <!-- Hitokoto 一言 End-->
   <p class="lead">
     <a class="btn btn-primary btn-lg" href="./upload" role="button">开始使用<span class="badge badge-light">NEW 2.0</span></a>
   </p>
