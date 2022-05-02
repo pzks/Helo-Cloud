@@ -31,9 +31,21 @@ include './header.php';
 <center>
 <div>
 <img src="./image/header-image.png" class="img-fluid" alt="Responsive image">
-  <p class="lead">人法地，地法天，天法道，道法自然</p>
+<!--  <p class="lead">人法地，地法天，天法道，道法自然</p>
   <footer class="blockquote-footer"> <cite title="Source Title">《老子》</cite></footer>
-  <p>A simple network disk gives you a simple experience</p>
+  <p>A simple network disk gives you a simple experience</p>-->
+  <!-- Hitokoto 一言 Start-->
+  <script>
+        fetch('https://v1.hitokoto.cn')
+          .then(response => response.json())
+          .then(data => {
+            const hitokoto = document.getElementById('hitokoto_text')
+            hitokoto.innerText = data.hitokoto
+          })
+          .catch(console.error)
+      </script>
+    <p id="hitokoto" class="lead"><a id="hitokoto_text">:D 获取中...</a></p>
+    <!-- Hitokoto 一言 End-->
   <p class="lead">
     <a class="btn btn-primary btn-lg" href="./upload" role="button">开始使用<span class="badge badge-light">NEW 2.0</span></a>
   </p>
