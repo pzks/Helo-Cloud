@@ -1,11 +1,16 @@
 ![渲染图](image/image.png)
-# HeloCloud
+# HeloCloud V2.2
 
 #### 介绍
 HeloCloud 是一个简单的php开发的网盘，提供给用户直接链接服务，1.0版本使用zui作为前端框架搭建，其后的版本使用bootstrap作为前端框架，后端基于simpost框架进行深度优化制作，感谢大家使用，其1.0版本使用开源协议为木兰2.0协议和cc4.0协议，但其2.0版本为木兰2.0和Hele open source license V3.1[HSL 3.1]进行发布
 
+#### V2.2版本更新内容
+
+在2.2版本中我们修复了目录的问题，新增功能，云笔记，同时更新了云笔记对应的功能，实现安装功能，同时用户可以更改config目录里的配置内容，界面进行了细微的调整和修饰，新增后台程序，虽然功能少，但是存在。
+
  **下载使用** `git clone https://gitee.com/penkai/helo-cloud.git`
- **发行版** https://gitee.com/penkai/helo-cloud/releases/v2.0
+
+ **发行版** https://gitee.com/penkai/helo-cloud/releases/v2.2
 
 - HSL 3.1 ：[https://pzks.github.io/2021/04/30/Hele-open-source-license/](https://pzks.github.io/2021/04/30/Hele-open-source-license/)
 
@@ -18,12 +23,12 @@ HeloCloud 是一个简单的php开发的网盘，提供给用户直接链接服�
 #### 版本发展
 | 版本   | 日期        | 修改内容           |
 |------|-----------|----------------|
-| v1.0 | 2022.2.12 | 第一个版本，bug版本    |
-| v2.0 | 2022.2.17 | 第二个版本，修复了n个bug，添加新功能 |
+| v1.0 | 2022.2.12 | bug版本，第一个制作版本 |
+| v2.0 | 2022.2.17 | 修复了n个bug，添加新功能，修改前端框架 |
+| V2.1 | 2022.5.2 | 感谢@IveTian和@nriot的贡献，添加一言和修改目录问题，修复了一些bug |
+| V2.2 | 2022.5.3 | 添加云笔记功能，新增后台，新增安装程序，同时对程序进行微调，并且修复bug |
 
 
-1. 2.0添加的新功能：重置UI优化前端（换框架）,实现安全登录（密码cookie比较）不会像1.0那样改cookie就可以登录,实现登录注册验证码（防止恶意注册）,更改注册登录机制,添加文件删除功能，新增读取文件大小和创建日期，新增非法登录检查，新增404.php页面等
-2. 2.0修复的问题：xss注册漏洞，修复空文件漏洞，修复上传漏洞等
 
 #### 使用到的项目
 
@@ -32,6 +37,7 @@ HeloCloud 是一个简单的php开发的网盘，提供给用户直接链接服�
 3. jquery前端：https://jquery.com/
 4. openzui前端：http://www.openzui.com/
 5. bootstrap前端：https://getbootstrap.com/
+6. markdown编辑器：https://pandao.github.io/editor.md/
 
 #### 致谢
 感谢bilibili的广大网友提出的bug建议，感谢那些找bug的人，感谢那些提供建议的人

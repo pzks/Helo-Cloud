@@ -7,8 +7,11 @@ copyright (C) 2021 pengzekai
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>退出</title>
-
+<title><?php 
+$title=@file_get_contents("./config/title.txt");
+echo $title.'- Powered by HeloCloud';
+?></title>
+<link rel="Shortcut Icon" href="./image/title.ico" type="image/x-icon" />
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <script src="./js/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -27,6 +30,12 @@ copyright (C) 2021 pengzekai
 //----------------------
 setcookie("key"/*cookie的名称*/,""/*cookie的值*/,""/*cookie的生效时间*/);
 setcookie("password"/*cookie的名称*/,""/*cookie的值*/,""/*cookie的生效时间*/);
+$install_file = "./config/install.ok";
+if(is_file($install_file))
+{}else{
+header('Location: install/install.php');
+exit;
+}
 
 if($user==""){
 echo '<script language="JavaScript">

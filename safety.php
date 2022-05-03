@@ -1,12 +1,7 @@
 <?php
-//----------------------
-//版权所有，侵权必究
-//copyright (C) 2022 pengzekai
-//----------------------
 $if_safe = $_COOKIE['password'];
 $user = $_COOKIE['key'];
 if ($user == ""){
-
 }else{
 $pass_path = "./pass/".$user;
 $password = file_get_contents($pass_path."/mainkey.txt");

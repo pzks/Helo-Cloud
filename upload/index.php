@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>何乐云盘 - 个人中心</title>
+<title><?php 
+$title=@file_get_contents("../config/title.txt");
+echo $title.'个人中心 - Powered by HeloCloud';
+?></title>
+<link rel="Shortcut Icon" href="../image/title.ico" type="image/x-icon" />
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <script src="../js/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -65,11 +69,37 @@ $user=$_COOKIE['key'];
 $chunchu =@file_get_contents("../data/".$user."/now_user_number.txt");
 echo $chunchu."MB/10240MB(10GB)";
 ?></div>
+
+<div class="title"><span class="badge badge-light">权限</span>
+<?php
+$user=$_COOKIE['key'];
+header("content-type:text/html;charset=utf-8");
+$sf = @file_get_contents("../data/".$user."/sf.txt");
+if($sf=="u")
+{
+	echo '<span class="badge badge-dark">普通用户</span>';
+} else {
+	echo '';
+}
+if($sf=="a")
+{
+	echo '<span class="badge badge-warning">管理员<a href="../admin/">>>>进入管理后台<<<</a></span>';
+} else {
+	echo '<span class="badge badge-danger">非法权限组</span>';
+}
+?>
+</div>
 </div>
 <br>
+
 <div class="alert alert-dark" role="alert">
   请勿上传非法文件，如果发现，将进行封号并向有关部门进行举报核实！
 </div>
+
+<center>
+<a class="btn btn-success" href="../notecloud" role="button">开始使用云笔记</a>
+</center>
+<br>
 <div class="card">
   <div class="card-body">
     <h5 class="card-title">我们只允许上传的文件类型名称:</h5>
@@ -169,6 +199,12 @@ include '../footer.php';
 include './function.php';
 //就这样吧！
 //----------------------
+$install_file = "../config/install.ok";
+if(is_file($install_file))
+{}else{
+header('Location: ../install/install.php');
+exit;
+}
 ?>
 
 </body>

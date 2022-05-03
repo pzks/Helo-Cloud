@@ -1,4 +1,8 @@
 <?php
+//----------------------
+//版权所有，侵权必究 -
+//copyright (C) 2022 pengzekai -
+//----------------------
 $user = $_POST["user"];
 $pass_path = "./pass/".$user;
 $pass_path1 = "./pass/";

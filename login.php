@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>何乐云盘</title>
+<title><?php 
+$title=@file_get_contents("./config/title.txt");
+echo $title.'- Powered by HeloCloud';
+?></title>
+<link rel="Shortcut Icon" href="./image/title.ico" type="image/x-icon" />
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <script src="./js/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -51,7 +55,7 @@ include './header.php';
   </div>
   <input type="text" name="code" class="form-control" placeholder="captcha-code" aria-describedby="sizing-addon2">
 </div><br>
-<input class="btn btn-primary"type="submit" name="submit" value="登录"/><br>
+<input class="btn btn-primary" type="submit" name="submit" value="登录"/><br>
 <a class="btn btn-link" href="./reg.php">没有账号？注册一个！</a>
   </form>
   </div>
@@ -70,7 +74,6 @@ include './header.php';
 $user_name = $_POST["user"];
 $pass = $_POST["pass"];
 $pass_get = $_POST["pass"];
-
 if ($_POST["submit"]) {
   if ($user_name == "") {
       echo '<script language="JavaScript">

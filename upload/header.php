@@ -1,6 +1,9 @@
 <div class="fixed-top">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="../index.php">HeloCloud</a>
+  <a class="navbar-brand" href="../index.php"><?php 
+$title=@file_get_contents("../config/title.txt");
+echo $title;
+?></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -16,6 +19,9 @@
       <li class="nav-item">
         <a class="nav-link" href="./index.php">个人中心</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../notecloud">云笔记</a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         我的账号
@@ -29,7 +35,7 @@ $icon=@file_get_contents("../data/".$user."/icon.txt");
 $user_if = $_COOKIE['key'];
 if($user_if == "")
 {
-  echo '<center><img width="130px" height="130px" class="img-thumbnail" src="image/1.png"></center>';
+  echo '<center><img width="130px" height="130px" class="img-thumbnail" src="../image/1.png"></center>';
 }else{
   echo '<center><img width="130px" height="130px" class="img-thumbnail" src='.$icon.'></center>';
 }

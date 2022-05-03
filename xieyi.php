@@ -2,9 +2,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>用户协议</title>
-
+<title><?php 
+$title=@file_get_contents("./config/title.txt");
+echo $title.'- Powered by HeloCloud';
+?></title>
 <link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="Shortcut Icon" href="./image/title.ico" type="image/x-icon" />
 <script src="./js/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

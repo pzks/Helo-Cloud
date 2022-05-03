@@ -1,6 +1,13 @@
 <div class="fixed-top">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="./index.php">HeloCloud</a>
+  <a class="navbar-brand" href="./index.php"><?php 
+//----------------------
+//版权所有，侵权必究 -
+//copyright (C) 2022 pengzekai -
+//----------------------
+$title=@file_get_contents("./config/title.txt");
+echo $title;
+?></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -15,6 +22,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./upload/">个人中心</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./notecloud/">云笔记</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

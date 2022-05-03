@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>何乐云盘</title>
+<title><?php 
+$title=@file_get_contents("./config/title.txt");
+echo $title.'- Powered by HeloCloud';
+?></title>
 <link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="Shortcut Icon" href="./image/title.ico" type="image/x-icon" />
 <script src="./js/sweetalert.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -41,7 +45,7 @@ include './header.php';
   </div>
   <input type="text" name="code" class="form-control" placeholder="captcha-code" aria-describedby="sizing-addon2">
 </div><br>
-<input class="btn btn-primary"type="submit" name="submit" value="注册！"/><br>
+<input class="btn btn-primary" type="submit" name="submit" value="注册"/><br>
 <a class="btn btn-link" href="./login.php">已有账号？登录！</a>
   </form>
   </div>
@@ -111,14 +115,8 @@ else if(isset($_REQUEST['code']))
           </script>';
         }
 
-        if (file_exists("./data/".$user_name) == 0) {
-          //密码保存目录[使用时请更改]
-          $reg_glod = "2";
-          //注册赠送金币数量
-          $sf_user = "u";
-          $userr = "./data/".$user_name;
-          $pass_path = "./pass/".$user_name;
-          $pass_path1 = "./pass/";
+        if (file_exists("./data/".$user_name) == 0) {  
+        include './config/p_config.php';
           mkdir($userr,0777,true);
           mkdir($pass_path,0777,true);
           //创建用户目录
@@ -133,7 +131,7 @@ else if(isset($_REQUEST['code']))
           file_put_contents($qqh,$qq);
           $name_file=$userr."/name.txt";
           file_put_contents($name_file,$user_name);
-          $icon="http://q.qlogo.cn/headimg_dl?bs=qq&dst_uin=".$qq."&src_uin=www.qqjike.com&fid=blog&spec=640";
+          $icon="http://q.qlogo.cn/headimg_dl?bs=qq&dst_uin=".$qq."&spec=640";
           $tx_file=$userr."/icon.txt";
           file_put_contents($tx_file,$icon);
           $glod=$userr."/glod.txt";
@@ -145,7 +143,7 @@ else if(isset($_REQUEST['code']))
       //复制许可证到用户目录，这个是有道理的！
           $user_upload = "./upload/".$user_name;
           mkdir($user_upload,0777,true);
-          copy("./config/license.txt","./upload/".$user_name."/license.txt");
+          //copy("./config/license.txt","./upload/".$user_name."/license.txt");
       //==============================
       echo '<script language="JavaScript">
       swal({
